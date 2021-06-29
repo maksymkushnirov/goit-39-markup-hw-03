@@ -15,12 +15,22 @@ body {
   font-family: var(--font-family-primary), sans-serif;
   color: var(--color-main);
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* ????? Как прописать? «B1» Допускается глобальный сброс стилей по селектору тега для элементов <h1>...<h6>, <p> и <ul>. */
 a {
   text-decoration: none;
 }
 ul {
   list-style: none;
 }
+/* ?????
+«B7» Создан общий вспомогательный класс .container для центрирования и ограничения контента по ширине.
+«B8» Ширина «контейнера» соответствует макету и равна 1200px.
+«B9» «Контейнер» оборачивает контент хедера, футера и секций. То есть находится внутри них. */
 /* header */
 .logo {
   font-family: var(--font-family-secondary);
