@@ -13,41 +13,40 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- header -->
     <header class="header">
-      <div class="header-div container">
-        <a class="logo" href="./index.html"
+      <div class="header-container container">
+        <a class="logo " href="./index.html"
           >Web<span class="logo-accent-header">Studio</span></a
         >
         <!-- !!!Лого вне nav потому что в hw-08 nav будет скрыт display non!!! -->
-        <div class="nav-div">
-          <nav class="nav">
-            <ul class="list-nav-header">
-              <li class="list-nav-header-item">
-                <a
-                  class="link list-nav-header-item-link current"
-                  href="./index.html"
-                  >Студия</a
-                >
-              </li>
-              <li class="list-nav-header-item">
-                <a
-                  class="link list-nav-header-item-link"
-                  href="./portfolio.html"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="list-nav-header-item">
-                <a class="link list-nav-header-item-link" href="">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="nav">
+          <ul class="list-nav-header">
+            <li class="list-nav-header-item">
+              <a
+                class="link list-nav-header-item-link current"
+                href="./index.html"
+                >Студия</a
+              >
+            </li>
+            <li class="list-nav-header-item">
+              <a class="link list-nav-header-item-link" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="list-nav-header-item">
+              <a class="link list-nav-header-item-link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
         <!-- ????? Есть ли правильный порядок поочерёдности разметки div, например от мелких блоков до больших? (когда один div находится в другом div) -->
         <!-- ????? Нужно ли оборачивать в div все блоки и отдельно подблоки внутри блоков (например отдельно навигацию и отдельно контакты внутри header)?-->
         <!-- ????? Нужно ли оборачивать контакты в div? -->
@@ -73,15 +72,18 @@
     <main class="main">
       <!-- hero  -->
       <section class="section-hero">
+        <div class="container">
         <h1 class="title-section-hero">
           Эффективные решения для вашего бизнеса
         </h1>
         <button class="button-section-hero" type="button">
           Заказать услугу
         </button>
+        <div>
       </section>
       <!-- advantages -->
       <section class="section-advantages">
+        <div class="container">
         <h2 class="title-section visually-hidden">Наши преимущества</h2>
         <ul class="list-section-advantages">
           <li class="list-section-advantages-item">
@@ -117,9 +119,11 @@
             </p>
           </li>
         </ul>
+        </div>
       </section>
       <!-- activities -->
       <section class="section-activities">
+        <div class="container">
         <h2 class="title-section">Чем мы занимаемся</h2>
         <ul class="list-section-activities">
           <li class="list-section-activities-item">
@@ -148,9 +152,11 @@
             />
           </li>
         </ul>
+        </div>
       </section>
       <!-- team -->
       <section class="section-team">
+        <div class="container">
         <h2 class="title-section">Наша команда</h2>
         <ul class="list-section-team">
           <li class="list-section-team-item">
@@ -161,10 +167,12 @@
               width="270"
               height="260"
             />
+            <div class="list-section-team-item-text">
             <h3 class="list-section-team-item-title">Игорь Демьяненко</h3>
             <p class="list-section-team-item-description" lang="en">
               Product Designer
             </p>
+            </div>
           </li>
           <li class="list-section-team-item">
             <img
@@ -203,10 +211,12 @@
             </p>
           </li>
         </ul>
+        </div>
       </section>
     </main>
     <!-- footer -->
     <footer class="footer">
+      <div class="container">
       <a class="logo" href="./index.html"
         >Web<span class="logo-accent-footer">Studio</span></a
       >
@@ -234,6 +244,7 @@
           </li>
         </ul>
       </address>
+      </div>
     </footer>
   </body>
 </html>

@@ -1,7 +1,7 @@
 /* Вопросы легко найти введя в поиск: ????? (Всё что отмечено по другому - старые вопросы или личные комментарии) */
 :root {
-  --font-family-primary: "Roboto", sans-serif;
-  --font-family-secondary: "Raleway", sans-serif;
+  --font-family-primary: 'Roboto', sans-serif;
+  --font-family-secondary: 'Raleway', sans-serif;
   --color-main: #757575;
   --color-white-primary: #ffffff;
   --color-white-secondary: rgba(255, 255, 255, 0.6);
@@ -38,6 +38,8 @@ a {
 ul,
 ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 img {
   display: block;
@@ -69,21 +71,21 @@ img {
 }
 .container {
   width: 1200px;
-  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  /* padding: 0 15px; */
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 0 auto; */
 }
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 /* header */
 .header {
   border-bottom: 1px solid #ececec;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
-.header-div {
-  padding-top: 32px;
-  padding-bottom: 32px;
+.header-container {
   display: flex;
   align-items: center;
 }
@@ -97,6 +99,12 @@ img {
 .logo-accent-header {
   color: var(--color-accent-secondary);
 }
+.list-nav-header {
+  display: flex;
+}
+.list-nav-header-item:not(:last-child) {
+  margin-right: 50px;
+}
 .list-nav-header-item-link {
   font-weight: 500;
   font-size: 14px;
@@ -108,6 +116,13 @@ img {
 .list-nav-header-item-link:focus,
 .list-nav-header-item-link.current {
   color: var(--color-accent-primary);
+}
+.list-contacts-header {
+  display: flex;
+  margin-left: auto;
+}
+.list-contacts-header-item:not(:last-child) {
+  margin-right: 50px;
 }
 .list-contacts-header-item-link {
   font-weight: 500;
@@ -124,6 +139,10 @@ img {
 /* hero */
 .section-hero {
   background-color: var(--color-background-primary);
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 200px 0;
+  text-align: center;
 }
 .title-section-hero {
   font-weight: 900;
@@ -133,6 +152,10 @@ img {
   text-transform: uppercase;
   /*   text-align: center; */
   color: var(--color-white-primary);
+  width: 696px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .button-section-hero {
   font-family: inherit;
@@ -144,12 +167,25 @@ img {
   cursor: pointer;
 }
 /* advantages */
+.section-advantages {
+  padding: 94px 0;
+}
+.list-section-advantages {
+  display: flex;
+}
+.list-section-advantages-item {
+  width: 270px;
+}
+.list-section-advantages-item:not(:last-child) {
+  margin-right: 30px;
+}
 .list-section-advantages-item-title {
   font-size: 14px;
   /* !!! Возможно нужно будет вписать font-weight после сброса !!!*/
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--color-dark-primary);
+  margin-bottom: 10px;
 }
 .list-section-advantages-item-description {
   font-size: 14px;
@@ -158,19 +194,51 @@ img {
   color: var(--color-main);
 }
 /* activities */
+.section-activities {
+  padding-bottom: 94px;
+}
 .title-section {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--color-dark-primary);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.list-section-activities {
+  display: flex;
+}
+.list-section-activities-item:not(:last-child) {
+  margin-right: 30px;
 }
 /* team */
+.section-team {
+  padding: 94px 0;
+  background-color: #f5f4fa;
+}
+.list-section-team {
+  display: flex;
+}
+.list-section-team-item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.list-section-team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.list-section-team-item-text {
+  text-align: center;
+  padding: 30px 32px;
+}
 .list-section-team-item-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--color-dark-primary);
+  margin-bottom: 10px;
 }
 .list-section-team-item-description {
   line-height: 1.19;
@@ -180,6 +248,9 @@ img {
 }
 /* portfolio.html */
 /* examples */
+.section-examples {
+  padding: 94px 0;
+}
 .button-section-examples {
   font-family: inherit;
   font-weight: 500;
@@ -188,18 +259,49 @@ img {
   letter-spacing: 0.03em;
   color: var(--color-dark-primary);
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
 }
 .button-section-examples:hover,
 .button-section-examples:focus,
 .button-section-examples.current {
   background-color: var(--color-accent-primary);
   color: var(--color-white-primary);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.list-section-examples-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.list-section-examples-button-item:not(:last-child) {
+  margin-right: 8px;
+}
+.list-section-examples-example {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.list-section-examples-example-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+}
+.list-section-examples-example-item-text {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 .list-section-examples-example-item-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-dark-primary);
+  margin-bottom: 4px;
 }
 .list-section-examples-example-item-description {
   font-size: 16px;
@@ -210,6 +312,9 @@ img {
 /* footer */
 .footer {
   background-color: var(--color-background-primary);
+}
+.header .logo {
+  margin-right: 93px;
 }
 .logo-accent-footer {
   color: var(--color-white-primary);
