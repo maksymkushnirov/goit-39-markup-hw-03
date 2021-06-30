@@ -14,24 +14,79 @@
 body {
   font-family: var(--font-family-primary), sans-serif;
   color: var(--color-main);
+  background-color: var(--color-white-primary);
 }
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/* ????? Как прописать? «B1» Допускается глобальный сброс стилей по селектору тега для элементов <h1>...<h6>, <p> и <ul>. */
+/* ????? Правильно ли прописано? «B1» Допускается глобальный сброс стилей по селектору тега для элементов <h1>...<h6>, <p> и <ul>. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 a {
   text-decoration: none;
 }
-ul {
+ul,
+ol {
+  list-style: none;
+}
+img {
+  display: block;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.list {
   list-style: none;
 }
 /* ?????
 «B7» Создан общий вспомогательный класс .container для центрирования и ограничения контента по ширине.
 «B8» Ширина «контейнера» соответствует макету и равна 1200px.
 «B9» «Контейнер» оборачивает контент хедера, футера и секций. То есть находится внутри них. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* header */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header-div {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+}
 .logo {
   font-family: var(--font-family-secondary);
   font-size: 26px;
@@ -89,19 +144,6 @@ ul {
   cursor: pointer;
 }
 /* advantages */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 .list-section-advantages-item-title {
   font-size: 14px;
   /* !!! Возможно нужно будет вписать font-weight после сброса !!!*/

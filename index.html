@@ -9,56 +9,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- header -->
     <header class="header">
-      <a class="logo" href="./index.html"
-        >Web<span class="logo-accent-header">Studio</span></a
-      >
-      <!-- !!!Лого вне nav потому что в hw-08 nav будет скрыт display non!!! -->
-      <nav class="nav">
-        <ul class="list-nav-header">
-          <li class="list-nav-header-item">
+      <div class="header-div container">
+        <a class="logo" href="./index.html"
+          >Web<span class="logo-accent-header">Studio</span></a
+        >
+        <!-- !!!Лого вне nav потому что в hw-08 nav будет скрыт display non!!! -->
+        <div class="nav-div">
+          <nav class="nav">
+            <ul class="list-nav-header">
+              <li class="list-nav-header-item">
+                <a
+                  class="link list-nav-header-item-link current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="list-nav-header-item">
+                <a
+                  class="link list-nav-header-item-link"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="list-nav-header-item">
+                <a class="link list-nav-header-item-link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ????? Есть ли правильный порядок поочерёдности разметки div, например от мелких блоков до больших? (когда один div находится в другом div) -->
+        <!-- ????? Нужно ли оборачивать в div все блоки и отдельно подблоки внутри блоков (например отдельно навигацию и отдельно контакты внутри header)?-->
+        <!-- ????? Нужно ли оборачивать контакты в div? -->
+        <ul class="list-contacts-header">
+          <li class="list-contacts-header-item">
             <a
-              class="link list-nav-header-item-link current"
-              href="./index.html"
-              >Студия</a
+              class="link list-contacts-header-item-link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
             >
           </li>
-          <li class="list-nav-header-item">
-            <a class="link list-nav-header-item-link" href="./portfolio.html"
-              >Портфолио</a
+          <li class="list-contacts-header-item">
+            <a
+              class="link list-contacts-header-item-link"
+              href="tel:+380961111111"
+              >+38 096 111 11 11</a
             >
-          </li>
-          <li class="list-nav-header-item">
-            <a class="link list-nav-header-item-link" href="">Контакты</a>
           </li>
         </ul>
-      </nav>
-      <ul class="list-contacts-header">
-        <li class="list-contacts-header-item">
-          <a
-            class="link list-contacts-header-item-link"
-            href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="list-contacts-header-item">
-          <a
-            class="link list-contacts-header-item-link"
-            href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+      </div>
     </header>
     <!-- main -->
     <main class="main">
