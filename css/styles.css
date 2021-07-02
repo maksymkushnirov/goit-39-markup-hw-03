@@ -89,6 +89,7 @@ img {
   display: flex;
   align-items: center;
 }
+
 .logo {
   font-family: var(--font-family-secondary);
   font-size: 26px;
@@ -98,6 +99,9 @@ img {
 }
 .logo-accent-header {
   color: var(--color-accent-secondary);
+}
+.header .logo {
+  margin-right: 93px;
 }
 .list-nav-header {
   display: flex;
@@ -313,8 +317,18 @@ img {
 .footer {
   background-color: var(--color-background-primary);
 }
-.header .logo {
-  margin-right: 93px;
+.footer-container {
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+.footer-logo-adrress {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
 }
 .logo-accent-footer {
   color: var(--color-white-primary);
@@ -325,6 +339,9 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.list-address-item:not(:last-child) {
+  padding-bottom: 9px;
 }
 .link-contacts-footer-address {
   color: var(--color-white-primary);
