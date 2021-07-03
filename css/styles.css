@@ -21,7 +21,6 @@ body {
 *::after {
   box-sizing: border-box;
 }
-/* ????? Правильно ли прописано? «B1» Допускается глобальный сброс стилей по селектору тега для элементов <h1>...<h6>, <p> и <ul>. */
 h1,
 h2,
 h3,
@@ -52,10 +51,6 @@ img {
 .list {
   list-style: none;
 }
-/* ?????
-«B7» Создан общий вспомогательный класс .container для центрирования и ограничения контента по ширине.
-«B8» Ширина «контейнера» соответствует макету и равна 1200px.
-«B9» «Контейнер» оборачивает контент хедера, футера и секций. То есть находится внутри них. */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -252,7 +247,6 @@ img {
 }
 .list-section-team-item-description {
   line-height: 1.19;
-  /* ????? Нужно ли здесь указывать font-weight? И как понять какой он чейчас, если в стилях он не прописан и не унаследывается, а через девтулзы это свойство не отображается?*/
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -327,16 +321,8 @@ img {
 }
 .footer-container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
-.footer-logo-adrress {
-  display: inline-block;
-  flex-direction: column;
-  width: 231px;
-  margin-left: 0;
-  padding: 0px;
-}
-/* ????? Почему щирина ссылки логотипа в футере (cursor pointer) занимаеи всю ширину div, если к ней применено свойство класса .link display:inline ?????*/
 .footer .logo {
   margin-bottom: 20px;
 }
@@ -351,7 +337,7 @@ img {
   letter-spacing: 0.03em;
 }
 .list-address-item:not(:last-child) {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
 }
 .link-contacts-footer-address {
   color: var(--color-white-primary);
@@ -372,4 +358,5 @@ img {
 Нужно ли использовать сброс:
 a{text-decoration:none;} ul{list-style:none;}?
 Или во втором ДЗ ссылки и списки могут оставаться со стандартными декоративными элементами?
-Какие глобальные стили применяют к body?*/
+Какие глобальные стили применяют к body?
+Правильно ли прописано? «B1» Допускается глобальный сброс стилей по селектору тега для элементов <h1>...<h6>, <p> и <ul>*/
