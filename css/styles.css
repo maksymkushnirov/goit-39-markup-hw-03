@@ -324,6 +324,7 @@ img {
   align-items: baseline;
 }
 .footer .logo {
+  display: inline-block;
   margin-bottom: 20px;
 }
 .logo-accent-footer {
