@@ -45,9 +45,6 @@
             </li>
           </ul>
         </nav>
-        <!-- ????? Есть ли правильный порядок поочерёдности разметки div, например от мелких блоков до больших? (когда один div находится в другом div) -->
-        <!-- ????? Нужно ли оборачивать в div все блоки и отдельно подблоки внутри блоков (например отдельно навигацию и отдельно контакты внутри header)?-->
-        <!-- ????? Нужно ли оборачивать контакты в div? -->
         <ul class="list-contacts-header">
           <li class="list-contacts-header-item">
             <a
@@ -68,7 +65,8 @@
     <main class="main">
       <!-- hero  -->
       <section class="section-hero">
-        <div class="container">
+<!-- ????? Почему при масштабировании заголовок и кнопка вылазять за background? Точно так и с контентом других секций. Для третьего ДЗ это нормально? -->
+        <div class="hero-container container">
         <h1 class="title-section-hero">
           Эффективные решения для вашего бизнеса
         </h1>
@@ -220,11 +218,12 @@
     <footer class="footer">
       <div class="footer-container container">
         <div class="footer-logo-adrress container">
-      <a class="logo" href="./index.html"
+      <a class="logo link" href="./index.html"
         >Web<span class="logo-accent-footer">Studio</span></a
       >
       <address class="address">
         <ul class="list-address">
+          <li class="list-address-item">
           <li class="list-address-item">
             <a
               class="link link-contacts-footer-address"
@@ -255,4 +254,6 @@ Cкринридер озвучивает текст из атрибута alt?
 Если в alt ечть текст на разных языках, то как правильно вписать атрибут lang="" в alt. Через span? Или можно сделать два alt на одну картинку и прописать lang="" для текста на неосновном языке страницы?
 Нужно ли адрес в футере добавлять в один список с телефоном и почтой и нужно ли делать его ссылкой (чтобы открывались карты гугл)?
 Prettier неудобно разрывает теги (например </a> в footer->address->ul->li). Так и должно быть или лучше изменить настройки самого Prettier?
-Применяют ли классы к изображениям?-->
+Применяют ли классы к изображениям?
+Есть ли правильный порядок поочерёдности разметки div, например от мелких блоков до больших? (когда один div находится в другом div)
+Нужно ли оборачивать в div все блоки и отдельно подблоки внутри блоков (например отдельно навигацию и отдельно контакты внутри header)?-->

@@ -39,9 +39,6 @@
             </li>
           </ul>
         </nav>
-        <!-- ????? Есть ли правильный порядок поочерёдности разметки div, например от мелких блоков до больших? (когда один div находится в другом div) -->
-        <!-- ????? Нужно ли оборачивать в div все блоки и отдельно подблоки внутри блоков (например отдельно навигацию и отдельно контакты внутри header)?-->
-        <!-- ????? Нужно ли оборачивать контакты в div? -->
         <ul class="list-contacts-header">
           <li class="list-contacts-header-item">
             <a class="link list-contacts-header-item-link" href="mailto:info@devstudio.com"
@@ -216,26 +213,36 @@
     </main>
     <!-- footer -->
     <footer class="footer">
-      <a class="logo" href="./index.html">Web<span class="logo-accent-footer">Studio</span></a>
-      <address class="address">
-        <ul class="list-address">
-          <li class="list-address-item">
-            <a
-              class="link link-contacts-footer-address"
-              href="https://goo.gl/maps/VducrsW37EZ99G4x5"
-              target="_blank"
-              rel="noopener noreferrer"
-              >г. Киев, пр-т Леси Украинки, 26</a
-            >
-          </li>
-          <li class="list-address-item">
-            <a class="link link-contacts-footer" href="mailto:info@example.com">info@example.com</a>
-          </li>
-          <li class="list-address-item">
-            <a class="link link-contacts-footer" href="tel:+380991111111">+38 099 111 11 11</a>
-          </li>
-        </ul>
-      </address>
+      <div class="footer-container container">
+        <div class="footer-logo-adrress container">
+          <a class="logo link" href="./index.html"
+            >Web<span class="logo-accent-footer">Studio</span></a
+          >
+          <address class="address">
+            <ul class="list-address">
+              <li class="list-address-item"></li>
+              <li class="list-address-item">
+                <a
+                  class="link link-contacts-footer-address"
+                  href="https://goo.gl/maps/VducrsW37EZ99G4x5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+                <!-- Prettier неудобно разрывает теги (например </a> на двух предыдущих строчках). Так и должно быть или лучше изменить настройки самого Prettier? -->
+              </li>
+              <li class="list-address-item">
+                <a class="link link-contacts-footer" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="list-address-item">
+                <a class="link link-contacts-footer" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
