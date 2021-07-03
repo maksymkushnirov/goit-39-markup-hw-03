@@ -46,8 +46,8 @@ img {
 .link {
   text-decoration: none;
   color: inherit;
-  display: block;
 }
+
 .list {
   list-style: none;
 }
@@ -344,9 +344,6 @@ img {
 }
 .link-contacts-footer {
   color: var(--color-white-secondary);
-}
-.link {
-  display: inline;
 }
 .link-contacts-footer-address:hover,
 .link-contacts-footer-address:focus,
